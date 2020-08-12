@@ -2,15 +2,15 @@
 <html>    
 <!-- the head section -->
 <head>
-    <title>My Guitar Shop</title>
+    <title>Yuppie Review App</title>
     <link rel="stylesheet" type="text/css"
-          href="<?php echo $app_path ?>main.css" />
+          href="../main.css">
 </head>
 
 <!-- the body section -->
 <body>
 <header>
-    <h1>My Guitar Shop</h1>
+    <h1>Yuppie Review App</h1>
 </header>
 <main>
             
