@@ -1,4 +1,4 @@
-* {
+body {
   background-color: #eeeeee;
   color: #000000;
   margin: 0;
@@ -6,4 +6,12 @@
   text-align: left;
   font-size: 100%;
   font-family: sans-serif;
+}
+
+.top-menu,
+#footer {
+	border: 1px dotted silver;
+	min-height: 18px;
+	padding: 4px;
+	margin-bottom: 4px;
 }

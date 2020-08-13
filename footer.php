@@ -1,7 +1,7 @@
 
 </main>
 <footer>
-    <p id="copyright">
+    <p id="footer">
         &copy; <?php echo date("Y"); ?> GJ Steyn
     </p>
 </footer>
