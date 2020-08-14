@@ -11,7 +11,7 @@
     <nav class="top-menu">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="review.php">Review a product</a></li>
+            <li><a href="review.php">Submit Review</a></li>
             <li><a href="admin.php">Admin</a></li>
         </ul>
     </nav>

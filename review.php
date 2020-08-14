@@ -9,9 +9,9 @@ if (!empty($_POST) && isset($_POST)) {
   $submit_review = array(
       'product_id' => filter_input(INPUT_POST, 'review-product', FILTER_VALIDATE_INT),
       'rating' => filter_input(INPUT_POST, 'review-rating', FILTER_VALIDATE_INT),
-      'name' => filter_input(INPUT_POST, 'review-name'),
-      'email' => filter_input(INPUT_POST, 'review-email'),
-      'text' => filter_input(INPUT_POST, 'review-text'),
+      'name' => strip_tags(filter_input(INPUT_POST, 'review-name')),
+      'email' => strip_tags(filter_input(INPUT_POST, 'review-email')),
+      'text' => strip_tags(filter_input(INPUT_POST, 'review-text')),
   );
 
   add_review($submit_review);

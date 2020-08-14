@@ -45,9 +45,7 @@ if (!empty($_POST) && isset($_POST)) {
     </p>
     <p>
       <label for="review-text">Edit the review:</label><br>
-      <textarea id="review-text" name="review-text" rows="8" cols="70">
-        <?php echo html_escape(strip_tags(trim($review['text']))); ?>
-      </textarea>
+      <textarea id="review-text" name="review-text" rows="8" cols="70"><?php echo trim($review['text']); ?></textarea>
     </p>
     <input type="submit" value="Save">
     <input type="reset" value="Reset">
