@@ -14,9 +14,6 @@ $product = get_product($product_id);
 $product_name = $product['name'];
 $description = $product['description'];
 
-// TODO: images
-//$image_alt = 'Image filename: ' . $image_filename;
-
 $review_count = count_reviews_for_product($product_id);
 
 $product_reviews = get_reviews_for_product($product_id);
@@ -58,7 +55,7 @@ if ($_POST) {
         <hr>
         <div class="review">
             <div class="review-meta">
-                <p><?php echo html_escape($review['name']) ?> - Rating: <?php echo html_escape($review['rating']); ?></p>
+                <b><?php echo html_escape($review['name']) ?></b> - Rating: <?php echo html_escape($review['rating']); ?>
             </div>
             <div class="review-body">
                 <?php echo html_escape($review['text']); ?>
@@ -70,7 +67,7 @@ if ($_POST) {
 <hr>
 <div class="review-form">
     <h2>Review this product</h2>
-    <form method="POST" name="review-form" action="">
+    <form method="POST" name="review-form">
         <p>
             <label for="review-name">Name:</label>
             <input type="text" id="review-name" name="review-name" value="">
@@ -94,11 +91,10 @@ if ($_POST) {
         </p>
         <p>
             <label for="review-text">Write a review:</label><br>
-            <textarea type="text" id="review-text" name="review-text" rows="8" cols="70"></textarea>
+            <textarea id="review-text" name="review-text" rows="8" cols="70"></textarea>
         </p>
         <input type="submit" value="Submit review">
     </form>
 </div>
-
 
 <?php include 'footer.php'; ?>

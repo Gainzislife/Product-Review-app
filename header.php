@@ -2,8 +2,7 @@
 <html>
 <head>
     <title>Yuppie Review App</title>
-    <link rel="stylesheet" type="text/css"
-          href="main.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
@@ -12,7 +11,8 @@
     <nav class="top-menu">
         <ul>
             <li><a href="index.php">Home</a></li>
-            <li><a href="#">Admin</a></li>
+            <li><a href="review.php">Review a product</a></li>
+            <li><a href="admin.php">Admin</a></li>
         </ul>
     </nav>
 </header>

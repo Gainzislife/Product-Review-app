@@ -57,15 +57,15 @@ function get_reviews()
     }
 }
 
-function get_review($product_id)
+function get_review($review_id)
 {
     global $db;
     $query = 'SELECT *
               FROM reviews
-              WHERE id = :product_id';
+              WHERE id = :review_id';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':product_id', $product_id);
+        $statement->bindValue(':review_id', $review_id);
         $statement->execute();
         $result = $statement->fetch();
         $statement->closeCursor();
@@ -137,19 +137,22 @@ function add_review($review_data)
     }
 }
 
-function edit_review($review_data)
+function edit_review($review_id, $product_id, $name, $email, $text)
 {
     global $db;
     $query = 'UPDATE reviews
-              SET product_id = :product_id, rating = :rating, name = :name, email = :email, text = :text
+              SET product_id = :product_id,
+                  name = :name,
+                  email = :email,
+                  text = :text
               WHERE id = :review_id';
     try {
         $statement = $db->prepare($query);
-        $statement->bindValue(':product_id', $review_data['product_id']);
-        $statement->bindValue(':rating', $review_data['rating']);
-        $statement->bindValue(':name', $review_data['name']);
-        $statement->bindValue(':email', $review_data['email']);
-        $statement->bindValue(':text', $review_data['text']);
+        $statement->bindValue(':review_id', $review_id);
+        $statement->bindValue(':product_id', $product_id);
+        $statement->bindValue(':name', $name);
+        $statement->bindValue(':email', $email);
+        $statement->bindValue(':text', $text);
         $statement->execute();
         $statement->closeCursor();
     } catch (PDOException $e) {
