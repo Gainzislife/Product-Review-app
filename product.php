@@ -67,19 +67,19 @@ if ($_POST) {
 <hr>
 <!-- Review this product -->
 <div class="review-form">
-    <h2>Review this product</h2>
+    <h2>Add your review</h2>
     <form method="POST" name="review-form">
         <p>
             <label for="review-name">Name:</label>
-            <input type="text" id="review-name" name="review-name" value="">
+            <input type="text" id="review-name" name="review-name" value="" required>
         </p>
         <p>
             <label for="review-email">Email:</label>
-            <input type="email" id="review-email" name="review-email" value="">
+            <input type="email" id="review-email" name="review-email" value="" required>
         </p>
         <p>
             <label for="review-rating">Rating:</label>
-            <input type="radio" id="rating-1" name="review-rating" value="1">
+            <input type="radio" id="rating-1" name="review-rating" value="1" required>
             <label for="rating-1">1</label>
             <input type="radio" id="rating-2" name="review-rating" value="2">
             <label for="rating-2">2</label>
