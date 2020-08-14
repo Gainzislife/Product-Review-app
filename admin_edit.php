@@ -14,7 +14,7 @@ if (isset($_GET['review_id'])) {
 $review = get_review($review_id);
 
 // If the form is submitted
-if ($_POST) {
+if (!empty($_POST) && isset($_POST)) {
 
   $product_id = filter_input(INPUT_POST, 'product-id', FILTER_VALIDATE_INT);
   $name = filter_input(INPUT_POST, 'review-name');
