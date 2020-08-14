@@ -43,7 +43,7 @@ VALUES(
 	It is a good product."
 );
 
--- create comment table
+-- create review table
 CREATE TABLE reviews(
     id INT AUTO_INCREMENT NOT NULL,
 	product_id INT NOT NULL,
