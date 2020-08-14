@@ -18,7 +18,7 @@ $review_count = count_reviews_for_product($product_id);
 
 $product_reviews = get_reviews_for_product($product_id);
 
-if ($_POST) {
+if (!empty($_POST) && isset($_POST)) {
     $submit_review = array(
         'product_id' => $product_id,
         'rating' => filter_input(INPUT_POST, 'review-rating', FILTER_VALIDATE_INT),

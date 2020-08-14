@@ -5,7 +5,7 @@ include 'header.php';
 
 $products = get_products();
 
-if ($_POST) {
+if (!empty($_POST) && isset($_POST)) {
   $submit_review = array(
       'product_id' => filter_input(INPUT_POST, 'review-product', FILTER_VALIDATE_INT),
       'rating' => filter_input(INPUT_POST, 'review-rating', FILTER_VALIDATE_INT),
