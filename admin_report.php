@@ -34,7 +34,7 @@ foreach ($products as $product) {
       Total reviews:
     </td>
     <td>
-      <?php echo $total_reviews; ?>
+      <?php echo html_escape($total_reviews); ?>
     </td>
   </tr>
   <tr>
@@ -42,7 +42,7 @@ foreach ($products as $product) {
       Average Rating:
     </td>
     <td>
-      <?php echo $avg_rating; ?>
+      <?php echo html_escape($avg_rating); ?>
     </td>
   </tr>
   <tr>
@@ -50,7 +50,7 @@ foreach ($products as $product) {
       Total products:
     </td>
     <td>
-      <?php echo $total_products; ?>
+      <?php echo html_escape($total_products); ?>
     </td>
   </tr>
 </table>

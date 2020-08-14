@@ -6,6 +6,7 @@ function html_escape($html)
     return htmlspecialchars($html, ENT_HTML5, 'UTF-8');
 }
 
+// Get all products
 function get_products()
 {
     global $db;
@@ -22,6 +23,7 @@ function get_products()
     }
 }
 
+// Get a certain products
 function get_product($product_id)
 {
     global $db;
@@ -41,6 +43,7 @@ function get_product($product_id)
     }
 }
 
+// Get all reviews
 function get_reviews()
 {
     global $db;
@@ -57,6 +60,7 @@ function get_reviews()
     }
 }
 
+// Get a certain review
 function get_review($review_id)
 {
     global $db;
@@ -76,6 +80,7 @@ function get_review($review_id)
     }
 }
 
+// Get all reviews for a certain product
 function get_reviews_for_product($product_id)
 {
     global $db;
@@ -95,6 +100,7 @@ function get_reviews_for_product($product_id)
     }
 }
 
+// Using SQL to count reviews for a product
 function count_reviews_for_product($product_id)
 {
     global $db;

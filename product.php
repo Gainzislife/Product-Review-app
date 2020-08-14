@@ -5,7 +5,7 @@ include 'header.php';
 
 // Get the product ID
 if (isset($_GET['product_id'])) {
-    $product_id = $_GET['product_id'];
+    $product_id = filter_input($_GET, 'product_id');
 } else {
     $product_id = 0;
 }
@@ -32,21 +32,21 @@ if ($_POST) {
 }
 ?>
 
-<h1><?php echo $product_name; ?></h1>
-<div id="left_column">
-    <p><img src="https://via.placeholder.com/150" alt="Image of product" /></p>
+<h1><?php echo html_escape($product_name); ?></h1>
+<div>
+    <img src="https://via.placeholder.com/150" alt="Image of product" />
 </div>
 
-<div id="right_column">
+<div>
     <h2>Description</h2>
-    <?php echo $description; ?>
+    <?php echo html_escape($description); ?>
 </div>
 
 <h3>
     <?php if ($review_count == 1) : ?>
-        <?php echo $review_count; ?> review
+        <?php echo html_escape($review_count); ?> review
     <?php else : ?>
-        <?php echo $review_count; ?> reviews
+        <?php echo html_escape($review_count); ?> reviews
     <?php endif; ?>
 </h3>
 
@@ -65,6 +65,7 @@ if ($_POST) {
 </div>
 
 <hr>
+<!-- Review this product -->
 <div class="review-form">
     <h2>Review this product</h2>
     <form method="POST" name="review-form">

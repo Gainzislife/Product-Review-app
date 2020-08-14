@@ -2,7 +2,7 @@
 </main>
 <hr>
 <footer>
-    <p id="footer">
+    <p>
         &copy; <?php echo date("Y"); ?> GJ Steyn
     </p>
 </footer>

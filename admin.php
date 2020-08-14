@@ -19,19 +19,19 @@ $reviews = get_reviews();
     <tr>
       <td class="col-meta">
         <?php
-        echo 'Review ID: ' . $review['id'] .
-          '<br>Product ID: ' . $review['product_id'] .
-          '<br>Name: ' . $review['name'] .
-          '<br>Email: ' . $review['email'];
+        echo 'Review ID: ' . html_escape($review['id']) .
+          '<br>Product ID: ' . html_escape($review['product_id']) .
+          '<br>Name: ' . html_escape($review['name']) .
+          '<br>Email: ' . html_escape($review['email']);
         ?>
       </td>
       <td class="col-body">
         <?php
-        echo 'Rating: ' . $review['rating'] .
-          '<br>Text:<br>' . $review['text']; ?>
+        echo 'Rating: ' . html_escape($review['rating']) .
+          '<br>Text:<br>' . html_escape($review['text']); ?>
       </td>
       <td class="col-edit">
-        <a href="admin_edit.php?review_id=<?php echo $review['id']; ?>">Edit</a>
+        <a href="admin_edit.php?review_id=<?php echo html_escape($review['id']); ?>">Edit</a>
       </td>
     </tr>
   <?php endforeach; ?>

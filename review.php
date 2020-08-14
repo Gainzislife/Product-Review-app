@@ -35,7 +35,7 @@ if ($_POST) {
           <label for="product-list">Choose a product:</label>
           <select id="product-list" name="review-product">
             <?php foreach ($products as $product) : ?>
-              <option value="<?php echo $product['id']; ?>"><?php echo $product['name']; ?></option>
+              <option value="<?php echo html_escape($product['id']); ?>"><?php echo html_escape($product['name']); ?></option>
             <?php endforeach; ?>
           </select>
         </p>
