@@ -33,15 +33,15 @@ if ($_POST) {
   <form method="POST" name="review-form">
     <p>
     <label for="product-id">Product ID:</label>
-      <input type="text" id="product-id" name="product-id" value="<?php echo html_escape($review['product_id']); ?>">
+      <input type="text" id="product-id" name="product-id" value="<?php echo $review['product_id']; ?>">
     </p>
     <p>
       <label for="review-name">Name:</label>
-      <input type="text" id="review-name" name="review-name" value="<?php echo html_escape($review['name']); ?>">
+      <input type="text" id="review-name" name="review-name" value="<?php echo $review['name']; ?>">
     </p>
     <p>
       <label for="review-email">Email:</label>
-      <input type="email" id="review-email" name="review-email" value="<?php echo html_escape($review['email']); ?>">
+      <input type="email" id="review-email" name="review-email" value="<?php echo $review['email']; ?>">
     </p>
     <p>
       <label for="review-text">Edit the review:</label><br>

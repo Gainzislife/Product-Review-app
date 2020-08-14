@@ -7,7 +7,7 @@
     <h2><?php echo html_escape($product['name']); ?></h2>
     <p><?php echo html_escape($product['description']); ?></p>
     <div class="view-product">
-      <a href="product.php?product_id=<?php echo html_escape($product['id']); ?>">View product</a>
+      <a href="product.php?product_id=<?php echo $product['id']; ?>">View product</a>
     </div>
   <?php endforeach; ?>
 
